@@ -3,7 +3,7 @@ import './Button.css';
 
 
 function Button(props) {
-  return <button className="Button">Benjamin button</button>;
+  return <button className="Button">Benjamin Button</button>;
 }
 
 // const Button=(props)=>{
@@ -13,3 +13,5 @@ function Button(props) {
 //         </button>
 //     );
 // }
+
+export default Button
