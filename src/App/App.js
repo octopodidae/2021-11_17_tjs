@@ -1,44 +1,39 @@
-import React from 'react';
-// import logo from '../logo.svg';
-import './App.css';
+import React from 'react'
 import Button from './components/Button/Button'
 
-function App() {
-  return (
-    <div className="App" >
+class App extends React.Component{
+
+  counter = 0;
+
+  constructor(props){
+    super(props);
+    this.state={counter:0, value2:0}
+  }
+  componentDidUpdate(){
+    console.table(arguments);
+    console.log('%c%s', 'font-size:42pt; color:red', 'Le changement est pret et effectif '+this.state.counter)
+  }
+  render(){
+    return <div className="App">
+    {/* My Comment */}
+      counter: {this.state.counter}<br/>
       <Button
-        text="OK"
-        onButtonClicked={(arg)=>{
-          console.log(arg)
-          alert("Le user a cliqué !")
-        }}       
-        bgColor="tomato"          
-      />
-      <Button 
-        text="Cancel"
-        onButtonClicked={(arg)=>{
-          console.log(arg)
-          alert("Le user a cliqué !")
-        }}         
-       />
-      <Button 
-        text="User ne clique pas ICI"
-        onButtonClicked={(arg)=>{
-          console.log(arg)
-          alert("Le user a cliqué !")
-        }}         
-       />
-      <Button 
-        text="Je ne sais pas"
-        onButtonClicked={(arg)=>{
-          console.log(arg)
-          alert("Le user a cliqué !")          
-        }}
-       bgColor="olive"
-       color="black"         
-       />
+      text="Soustraire 1"
+      onButtonClicked={()=>{
+        this.setState({ counter:this.state.counter-1 });
+        console.log(this.state)}
+      }
+      bgColor="tomato" />
+      <Button
+      text="Ajouter 1"
+      onButtonClicked={()=>{
+        this.setState({ counter:this.state.counter+1 });
+        console.log(this.state)}
+      }
+      bgColor="yellowgreen" />
     </div>
-  );
+  }
+
 }
 
 export default App;
