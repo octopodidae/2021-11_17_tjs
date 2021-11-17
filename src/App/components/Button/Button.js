@@ -1,9 +1,10 @@
 import React from "react";
 import './Button.css';
-
+import PropTypes from 'prop-types';
 
 function Button(props) {
-  return <button className="Button">Benjamin Button</button>;
+  console.log('props', props);
+  return <button className="Button" onClick={(evt)=>{props.onButtonClicked()}}>{props.text}</button>;
 }
 
 // const Button=(props)=>{
@@ -14,4 +15,7 @@ function Button(props) {
 //     );
 // }
 
-export default Button
+Button.propTypes={
+  text: PropTypes.string.isRequired,
+}
+export default Button;
