@@ -4,6 +4,15 @@ import PropTypes from 'prop-types';
 
 function Button(props) {
   const [isClicked, setClicked] = useState({clicked:false,uneValue:0});
+  useEffect(() => {
+    console.log(isClicked);
+    setTimeout(()=>{
+      setClicked({...isClicked, clicked:false});
+    },300);
+    // return () => {
+    //   cleanup
+    // }
+  }, [isClicked])
   console.log('props', props);
   return (
     <button
