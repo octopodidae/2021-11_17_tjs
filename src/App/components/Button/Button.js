@@ -5,9 +5,10 @@ import PropTypes from 'prop-types';
 function Button(props) {
   const [isClicked, setClicked] = useState({clicked:false,uneValue:0});
   useEffect(() => {
-    console.log(isClicked);
+    if(!isClicked.state)return;
+    console.log("isClicked", isClicked);
     setTimeout(()=>{
-      setClicked({...isClicked, clicked:false});
+      setClicked({...isClicked, state:false});
     },300);
     // return () => {
     //   cleanup
@@ -20,7 +21,7 @@ function Button(props) {
       onClick={(evt) => {
           setClicked({...isClicked, clicked:true});
           setTimeout(()=>{
-            setClicked({...isClicked, clicked:false});
+            setClicked({...isClicked, state:false});
           },300);
           props.onButtonClicked()
           }}
