@@ -1,6 +1,10 @@
 import React from 'react'
 import Button from './components/Button/Button'
+import FlexLayout from './components/FlexLayout/FlexLayout';
+import Header from './components/Header/Header';
 import MemeViewer from './components/MemeViewer/MemeViewer';
+import MemeForm from './components/MemeForm/MemeForm';
+
 
 class App extends React.Component{
 
@@ -16,26 +20,30 @@ class App extends React.Component{
   }
   render(){
     return (
-    <div className="App">
-      <MemeViewer meme={{
-        titre: 'mon 1er meme',
-        text: 'Stop la triche !',
-        x:375,
-        y:530,
-        fontSize:32,
-        fontWeight:'900',
-        underline: true,
-        italic:true,
-        frameX:0,
-        frameY:0,
-        color:'DarkSlateBlue'
-      }} image={{
-        url: "img/meme1.jpg",
-        title: "meme1",
-        h:778,
-        w:736
-      }} />
-    </div>
+    <><Header /><div className="App">
+        <FlexLayout>
+          <MemeViewer
+            meme={{
+              titre: 'mon 1er meme',
+              text: 'Stop la triche !',
+              x: 375,
+              y: 530,
+              fontSize: 32,
+              fontWeight: '900',
+              underline: true,
+              italic: true,
+              frameX: 0,
+              frameY: 0,
+              color: 'DarkSlateBlue'
+            }} image={{
+              url: "img/meme1.jpg",
+              title: "meme1",
+              h: 778,
+              w: 736
+            }} />
+          <MemeForm />
+        </FlexLayout>
+      </div></>
     );
   }
 
