@@ -6,10 +6,12 @@
     width:60px !important;
     
 }
-// .half input{
-//     // color: purple;
-//     width: 300px;
-// }
-.MemeForm input, .MemeForm select{
+.normalInput{
     width: 300px;
+}
+.checkInput{
+    margin-right: 20%;
+}
+.checkBoxes{
+    text-align: center;
 }

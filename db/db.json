@@ -1,0 +1,50 @@
+{
+  "memes": [
+    {
+      "id": 0,
+      "titre": "Meme",
+      "text": "Stop la triche !",
+      "x": 375,
+      "y": 530,
+      "color": "#ACACAC",
+      "underline": true,
+      "italic": true,
+      "frameX": 0,
+      "frameY": 0,
+      "fontWeight": "900",
+      "fontSize": 32,
+      "imageId": 0
+    },
+    {
+      "id": 1,
+      "titre": "Meme",
+      "text": "Yo !",
+      "x": 375,
+      "y": 530,
+      "color": "#ACACAC",
+      "underline": true,
+      "italic": true,
+      "frameX": 0,
+      "frameY": 0,
+      "fontWeight": "900",
+      "fontSize": 32,
+      "imageId": 1
+    }
+  ],
+  "images": [
+    {
+      "id": 0,
+      "titre": "Meme1",
+      "url": "img/meme1.jpg",
+      "w": 736,
+      "h": 778
+    },
+    {
+      "id": 1,
+      "titre": "Meme2",
+      "url": "img/meme2.jpg",
+      "w": 185,
+      "h": 250
+    }
+  ]
+}
